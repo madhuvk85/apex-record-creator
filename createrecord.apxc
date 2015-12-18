@@ -1,0 +1,23 @@
+public class createrecord {
+public static void createrec()
+{
+   boq__c[] boqlist = new list<boq__c>();
+boq__C boq1 = new boq__c(Item_Name__c = 'signal', Assessed_Quantity__c = 300, Supplied_Quantity__c = 300, Additional_Quantity__c
+=0, Need_Additional_quantity__C = False);
+boqlist.add(boq1);
+boq__C boq2 = new boq__c(Item_Name__c = 'point', Assessed_Quantity__c = 200, Supplied_Quantity__c = 200, Additional_Quantity__c
+=0, Need_Additional_quantity__C = false);
+boqlist.add(boq2);
+insert boqlist;
+
+site__c[] sitelist = new list<site__C>();
+site__c site1 = new site__c(name = 'site-0001', boq__c = boq1.id, Actual_use__c
+=250);
+sitelist.add(site1);
+site__c site2 = new site__c(name = 'site-0002', boq__c = boq2.id, Actual_use__c
+=150);
+sitelist.add(site2);
+insert sitelist;
+
+}
+}
